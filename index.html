@@ -3,53 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Navbar</title>
+  <title>Emanuel Villanueva</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./static/css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <a class="logo" href="/"><img src="images/logo.png" alt="logo"></a>
-    <nav>
-      <ul class="nav__links">
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </nav>
-    <a class="cta" href="#">Contact</a>
-    <p class="menu cta">Menu</p>
+  <input type="checkbox" id="open" class="menu-checkbox">
+  <header class="header">
+    <div class="u-wrapper">
+      <div class="header-content">
+        <a href="#" class="header-logo"></a>
+        <label for="open" class="menu-open"></label>
+        <nav class="menu">
+          <div class="u-wrapper">
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Projects</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
   </header>
-
-  <div id="mobile__menu" class="overlay">
-    <img src="images/logo.png" alt="logo">
-    <a class="close">&times;</a>
-    <div class="overlay__content">
-      <a href="#">Services</a>
-      <a href="#">Projects</a>
-      <a href="#">About</a>
-    </div>
-  </div>
-
-  <div class="contenido">
-  
-    <div class="main" id="section1">
-      <h2>Section 1</h2>
-      <p>Click on the link to see the "smooth" scrolling effect.</p>
-      <a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
-      <p>Note: Remove the scroll-behavior property to remove smooth scrolling.</p>
-    </div>
-    
-    <div class="main" id="section2">
-      <h2>Section 2</h2>
-      <a href="#section1">Click Me to Smooth Scroll to Section 1 Above</a>
-    </div>
-
-  </div >
-  <script type="text/javascript" src="mobile.js"></script>
+  <section class="hero">
+    <h1>Emanuel Villanueva</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid quos obcaecati dolorem corporis velit illum non culpa aut reprehenderit sit ut esse deserunt veniam aperiam quia earum, dolores quisquam libero.</p>
+  </section>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatibus nobis praesentium voluptate nam, adipisci illo officia commodi veritatis eveniet itaque libero voluptas cumque consequuntur doloremque perspiciatis ut, id eos.</p>
 </body>
 
 </html>
