@@ -1,0 +1,21 @@
+@import "./menu.styl"
+  
+.header
+  background var(--veryDarkBlue)
+  position relative
+  padding 1em 0
+  transition .3s background
+  position sticky
+  top 0
+  &-logo
+    display inline-flex
+    height 55px
+    width 230px
+    background url('../images/logo_transparent.png') no-repeat center
+    background-size contain
+  &-content
+    display flex
+    justify-content space-between
+    align-items center
+  @media screen and (min-width: 1024px)
+    padding .5em 0

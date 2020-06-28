@@ -1,0 +1,33 @@
+.about
+  text-align center
+  padding 1em 0
+  .u-wrapper
+    > .u-p
+      max-width 500px
+      margin auto
+    @media screen and (min-width: 600px)
+      > .u-p
+        max-width 800px
+        margin auto
+  &-grid
+    display grid
+    grid-template-columns: repeat(4, 1fr)
+    gap .7em
+    margin .5em 2em
+  @media screen and (max-width: 750px)
+    &-grid
+      gap .3em
+      margin 0
+      grid-template-columns: repeat(2, 1fr)
+  &-item
+    box-shadow: 0 10px 11px -5px rgba(83, 104, 223, .3)
+    border-radius: 1em
+    padding: .5em
+    padding-top 1.5em
+    .u-p
+      margin-top .5rem
+      font-size: 13px
+    .u-h3
+      font-size: 16px
+      margin-bottom .5rem
+      margin-top 1.5rem

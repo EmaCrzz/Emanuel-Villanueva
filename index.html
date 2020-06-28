@@ -27,10 +27,13 @@
                 <a href="#">Home</a>
               </li>
               <li>
-                <a href="#">Projects</a>
+                <a href="#about">About me</a>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <a href="#projects">Projects</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -53,14 +56,14 @@
     </div>
   </section>
 
-  <section class="about">
+  <section id="about" class="about">
     <div class="u-wrapper">
       <h2 class="u-h2">
         About me
       </h2>
       <p class="u-p">
         Since I started my developer journey, I have come across multiple ingenious and challenging projects.
-        I&nbsp;worked in remote agencies and collaborated with talented people to create digital products for commercial and consumer
+        I&nbspworked in remote agencies and collaborated with talented people to create digital products for commercial and consumer
         use.
       </p>
       <div class="about-grid">
@@ -101,6 +104,26 @@
           </p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="u-wrapper">
+      <h2 class="u-h2">Projects</h2>
+      <p class="u-p">
+        Estos son algunos de los proyectos que he trabajado de manera auto didacta.
+        la moayoria de eston retos y cursos de <a title="" href="#"> Platzi</a> 
+        y <a title="" href="#"> CodeMentor</a>
+      </p>
+      <div class="projects-grid">
+        <div class="projects-item"></div>
+        <div class="projects-item"></div>
+        <div class="projects-item"></div>
+        <div class="projects-item"></div>
+        <div class="projects-item"></div>
+        <div class="projects-item"></div>
+      </div>
+      <a title="" href="#" class="view-all">More all</a>
     </div>
   </section>
 
@@ -200,7 +223,62 @@
     </div>
   </section>
 
+  <footer id="contact" class="footer">
+    <div class="u-wrapper">
+      <div class="footer-content">
+        <div class="footer-primary">
+          <h4 class="u-h4">Get in touch.</h4>
+          <p class="u-p">
+            Send a general message or details of a project you'd like me to be a part of and
+            I'll get back to you as soon as possible.
+          </p>
+        </div>
+        <div class="footer-social">
+          <div class="footer-tooltip">
+            <span class="tooltiptext" id="myTooltip">Copy email</span>
+            <div class="u-p email" id="email">
+              <img src="./static/icons/icon-send-email.png" alt="send email">
+              <pre id="textoACopiar"><code>ema_villanueva@hotmail.com</code></pre>
+            </div>
+          </div>
+          <div>
+            <a href="#" target="_blank" class="github"></a>
+            <a href="#" target="_blank" class="linkedin"></a>
+            <a href="#" target="_blank" class="instagram"></a>
+            <a href="#" target="_blank" class="twitter"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var copyEmail =  document.getElementById("email")
+    copyEmail.addEventListener('click', () => {
+      var copyText = document.getElementById("textoACopiar")
+      var seleccion = document.createRange()
+      seleccion.selectNodeContents(copyText)
+      window.getSelection().removeAllRanges()
+      window.getSelection().addRange(seleccion)
+      try {
+        var res = document.execCommand('copy')
+        if (res) {
+          var tooltip = document.getElementById("myTooltip")
+          tooltip.innerHTML = "Copied!"
+        } else {
+          var tooltip = document.getElementById("myTooltip")
+          tooltip.innerHTML = "Error!"
+        }
+      }
+      catch (ex) {
+        console.error(ex);
+      }
+      window.getSelection().removeRange(seleccion)
+    })
+  </script>
+
 <!-- 
+    https://usebasin.com/f/2e94a21ee2dc
     I currently am working as a UX Engineer at GoDaddy
     Let's make something special.
     passion for learning
