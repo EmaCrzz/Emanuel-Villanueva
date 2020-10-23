@@ -1,0 +1,54 @@
+.menu {
+  position: fixed;
+  visibility: hidden;
+  &-open {
+    user-select: none;
+    height: 30px;
+    width: 30px;
+    display: inline-flex;
+    cursor: pointer;
+    background: url('../icons/menu-abierto.svg') no-repeat center;
+  }
+  &-checkbox {
+    display: none;
+    &:checked {
+      & ~ .header {
+        background: rgba(37, 43, 70, .9);
+        .menu-open {
+          background: url('../icons/cerrar.svg') no-repeat center;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    transform: translateY(0);
+    background: transparent;
+    visibility: visible;
+    opacity: 1;
+    position: initial;
+    height: auto;
+    &-open {
+      display: none;
+    }
+    ul {
+      display: flex;
+    }
+    li {
+      border-top: none;
+    }
+    a {
+      padding: .5em 1em;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: block;
+      text-align: center;
+      padding: 1em;
+      letter-spacing: 2px;
+      transition: .300s all;
+      &:hover {
+        color: rgba(255,255,255, .5);
+      }
+    }
+  }
+}
